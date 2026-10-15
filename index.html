@@ -171,8 +171,17 @@
                 <h3>Stage Académique en Sécurité des Réseaux — WenakLabs (N'Djamena)</h3>
                 <p><em>Août 2021 – Octobre 2021</em></p>
                 <ul>
-                    <li>Interconnexion sécurisée des centres délocalisés de ressources numériques.</li>
-                    <li>Configuration des réseaux LAN, DHCP, DNS, LDAP, SSL/TLS et IPsec.</li>
+                    <h5>Interconnexion sécurisée des centres délocalisés de ressources numériques.</h5>
+                    <li> <strong>Contexte & Enjeu :</strong> Projet de fin d'études réalisé pour le hub technologique <strong>WenakLabs</strong> (N'Djamena, Tchad). L'objectif était de concevoir et sécuriser l'interconnexion réseau entre le siège et les différents centres de ressources numériques délocalisés à l'intérieur du pays.</li>
+                    <li><strong>Architecture Réseau & Simulation :</strong></li>
+                    <li>Modélisation et déploiement de l'architecture réseau globale à l'aide des émulateurs et hyperviseurs <strong>GNS3</strong> et <strong>VMware Workstation</strong>.</li>
+                    <li>Configuration des routeurs Cisco (gamme 7200) et mise en place du protocole de routage dynamique <strong>OSPF</strong></li>
+                    <li><strong>Déploiement des Services Réseau de Base :</strong></li>
+                    <li>Implémentation sous Linux (Ubuntu) des services essentiels à l'exploitation : serveur <strong>DNS</strong> (Bind9), serveur <strong>DHCP</strong>, et annuaire centralisé <strong>OpenLDAP</strong> pour la gestion sécurisée des utilisateurs et des authentifications.</li>
+                    <li><strong>Sécurité & Chiffrement (VPN Site-à-Site IPsec) :</strong></li>
+                    <li>Mise en place d'un tunnel <strong>VPN Site-to-Site</strong> sécurisé via le protocole <strong>IPsec</strong> (modes AH/ESP, algorithmes de chiffrement AES-256 et hachage SHA) administré par les protocoles ISAKMP / IKE.</li>
+                    <li>Phase d'évaluation et d'audit : test de vulnérabilité et capture de trafic comparative (avant/après sécurisation) à l'aide de <strong>Netcat, Tcpdump</strong>  et <strong>Wireshark</strong> pour valider l'anonymisation et le chiffrement des flux de données</li>
+                    <li><strong>Technologies & Outils :</strong>Cisco IOS, GNS3, VMware, IPsec/VPN, OSPF, Bind9, OpenLDAP, Wireshark, Linux (Ubuntu), Bash.</li>
                 </ul>
             </div>
         </section>
