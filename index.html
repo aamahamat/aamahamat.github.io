@@ -151,10 +151,26 @@
             </div>
 
             <div class="project-item">
-                <h3>🌐 Modernisation et Sécurisation d'une Infrastructure Multi-sites (Projet SOLEA)</h3>
-                <p><strong>Description :</strong> Refonte complète de l'architecture réseau et des systèmes pour deux sites géographiques distincts.</p>
-                <p><em>Réalisations :</em> Interconnexion sécurisée par tunnels GRE/IPsec, virtualisation sous Proxmox, déploiement ToIP (Asterisk) et supervision Zabbix.</p>
-            </div>
+    <h3>Projet SOLEA 1 — Refonte et Modernisation de l'Infrastructure Réseau, Système et Téléphonie</h3>
+    <p><em>Projet d'envergure universitaire / technique</em></p>
+    <ul>
+        <h4>Conception, déploiement et sécurisation d'une infrastructure multi-sites (Aix-les-Bains / Valence).</h4>
+        <li><strong>Contexte & Enjeu :</strong> Refonte globale de l'infrastructure informatique et téléphonique de l'entreprise Soléa, reliant le site principal d'Aix-les-Bains (300 collaborateurs) au site distant de Valence (30 collaborateurs)[cite: 75].</li>
+        <li><strong>Architecture Réseau & Interconnexion :</strong></li>
+        <p style="text-indent: 40px;"><li>Segmentation par VLANs (10, 20, 30, 40 pour la ToIP, 60 pour le WiFi, 100 pour le management) et commutation sécurisée sur équipements Cisco avec protection <em>DHCP Snooping</em>[cite: 79, 91].</li></p>
+        <p style="text-indent: 40px;"><li>Interconnexion inter-sites via un <strong>tunnel GRE</strong> dynamisé par le protocole de routage dynamique <strong>OSPF</strong>, avec sondes de suivi (IP SLA) et QoS pour la voix[cite: 79, 91, 92].</li></p>
+        <li><strong>Services Réseau & Virtualisation (Linux / Proxmox) :</strong></li>
+        <p style="text-indent: 40px;"><li>Déploiement d'un serveur centralisé sous Debian gérant l'adressage dynamique et statique (<strong>DHCPv4/DHCPv6</strong>)[cite: 74, 80, 81].</li></p>
+        <p style="text-indent: 40px;"><li>Mise en place d'un serveur <strong>DNS / DDNS (BIND9)</strong> avec gestion des zones directes/inverses et actualisation automatique des baux[cite: 82, 84].</li></p>
+        <p style="text-indent: 40px;"><li>Centralisation des sauvegardes de configurations Cisco via un serveur <strong>TFTP</strong> et journalisation dynamique par <strong>Rsyslog</strong>[cite: 88, 89, 90].</li></p>
+        <li><strong>Téléphonie sur IP & Réseau Sans Fil :</strong></li>
+        <p style="text-indent: 40px;"><li>Mise en place d'un serveur <strong>Asterisk (IPBX)</strong> sous Ubuntu (VLAN 40) utilisant <strong>PJSIP</strong> pour l'interconnexion transparente des collaborateurs des deux sites[cite: 73, 85].</li></p>
+        <p style="text-indent: 40px;"><li>Déploiement d'un point d'accès WiFi Cisco autonome (WPA2/AES, puissance radio réduite à 4 dBm, administration SSH v2) sur un VLAN dédié[cite: 72].</li></p>
+        <li><strong>Supervision & Automatisation :</strong></li>
+        <p style="text-indent: 40px;"><li>Supervision centralisée via <strong>Zabbix</strong> (agents Linux et sondes SNMP Cisco) et écriture de scripts de test et d'automatisation en <strong>Bash et Batch</strong>[cite: 87, 88, 92].</li></p>
+        <li><strong>Technologies & Outils :</strong> Cisco IOS, Proxmox, OSPF, GRE, DHCPv4/v6, BIND9, Asterisk (PJSIP), Zabbix, Rsyslog, TFTP, Linux (Debian/Ubuntu), Bash, Batch.</li>
+    </ul>
+</div>
         </section>
 
         <section>
