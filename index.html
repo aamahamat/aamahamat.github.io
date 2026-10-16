@@ -149,9 +149,21 @@
             <h2>Projets Clés</h2>
             
             <div class="project-item">
-                <h3>🔍 Supervision et Récupération de Logs en Temps Réel</h3>
-                <p><strong>Description :</strong> Mise en place d'une chaîne de supervision complète sous ELK pour les flux de sécurité.</p>
-                <p><em>Réalisations :</em> Collecte des logs <code>iptables</code> via Filebeat/Logstash, indexation dans Elasticsearch et création de tableaux de bord sur Kibana.</p>
+                <h3>🔍 Supervision et Analyse en Temps Réel des Logs de Sécurité (Stack ELK & iptables)</h3>
+                <p><em>Projet de recherche & d'ingénierie en cours (Focus SecOps / SIEM)</em></p>
+                <ul>
+                    <li><strong>Contexte & Objectif :</strong> Conception et déploiement d'une architecture de supervision de type SIEM pour la collecte, le parsing et la visualisation en temps réel des journaux de sécurité d'infrastructure (filtrage pare-feu et services réseaux).</li>
+                    <li><strong>Architecture & Simulation (Conteneurs Docker) :</strong></li>
+                    <p style="text-indent: 40px;"><li><strong>Serveur A (Cible) :</strong> Déploiement d'un conteneur Docker hébergeant des services (Apache, MySQL, vsftpd) et configuration d'un pare-feu <code>iptables</code> avec journalisation active (règles <code>-j LOG</code>).</li></p>
+                    <p style="text-indent: 40px;"><li><strong>Simulation d'attaques :</strong> Utilisation d'outils de scan et d'analyse de vulnérabilités (<code>nmap</code>) depuis un second conteneur pour générer des flux de trafic suspects et alimenter les journaux du pare-feu.</li></p>
+                    <li><strong>Ingestion, Parsing & Normalisation des Logs :</strong></li>
+                    <p style="text-indent: 40px;"><li>Mise en place d'une chaîne de collecte automatisée via <strong>Filebeat / Logstash</strong> pour acheminer les logs bruts d'iptables.</li></p>
+                    <p style="text-indent: 40px;"><li>Structuration et découpage fin des journaux bruts en champs exploitables (utilisation de filtres avancés Logstash / Syslog-ng avec Patterndb ou grok patterns dédiés aux en-têtes IP/TCP/UDP).</li></p>
+                    <li><strong>Indexation & Visualisation (Stack ELK) :</strong></li>
+                    <p style="text-indent: 40px;"><li>Transmission des flux normalisés vers un cluster <strong>Elasticsearch</strong> conteneurisé pour l'indexation.</li></p>
+                    <p style="text-indent: 40px;"><li>Création de tableaux de bord dynamiques sur <strong>Kibana</strong> pour tracer les tentatives d'intrusion, identifier les services ciblés par les scans <code>nmap</code> et surveiller la posture de sécurité en temps réel.</li></p>
+                    <li><strong>Technologies & Outils :</strong> Docker, iptables, Apache, MySQL, vsftpd, Nmap, Filebeat, Logstash, Elasticsearch, Kibana, Syslog-ng (Patterndb), Linux, Bash.</li>
+                </ul>
             </div>
 
             <div class="project-item">
